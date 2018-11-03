@@ -1,0 +1,12 @@
+
+
+<h1>New cocktail</h1>
+
+<% if @cocktail.errors.any? %>
+<p>You have the following errors:</p>
+  <%= @cocktail.errors.messages %>
+<% end %>
+
+<%= render 'form', cocktail: @cocktail %>
+
+<%= link_to 'Back', cocktails_path %>
