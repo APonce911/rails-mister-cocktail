@@ -16,6 +16,7 @@ class CocktailsController < ApplicationController
   end
 
   def show
+    @doses = Dose.where(cocktail_id: params[:id])
   end
 
 private

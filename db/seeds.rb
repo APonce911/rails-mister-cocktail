@@ -6,7 +6,7 @@ Ingredient.create(name: "Cachaça")
 Ingredient.create(name: "Gin")
 Ingredient.create(name: "Campari")
 Ingredient.create(name: "Vermouth Rosso")
-Ingredient.create(name: "ice")
+Ingredient.create(name: "Ice")
 Ingredient.create(name: "Tonic Water")
 Ingredient.create(name: "Zimbro")
 Ingredient.create(name: "Lemon")
@@ -21,10 +21,36 @@ Cocktail.create(
   img_url: "https://scontent-gru2-2.cdninstagram.com/vp/b49bb5a153f011285bc5fc4f5e993467/5C64EE26/t51.2885-15/e35/28434827_594291790904286_2345681906080677888_n.jpg",
   post_url: "https://www.instagram.com/p/BgR_nTsHBuh/?taken-by=paladarsemfrescura"
   )
+Dose.create(
+  description: '60ml',
+  ingredient_id: Ingredient.find_by_name('Gin').id,
+  cocktail_id: Cocktail.find_by_name('Negroni').id,
+  )
+Dose.create(
+  description: '60ml',
+  ingredient_id: Ingredient.find_by_name('Campari').id,
+  cocktail_id: Cocktail.find_by_name('Negroni').id,
+  )
+Dose.create(
+  description: '60ml',
+  ingredient_id: Ingredient.find_by_name('Vermouth Rosso').id,
+  cocktail_id: Cocktail.find_by_name('Negroni').id,
+  )
+Dose.create(
+  description: '60ml',
+  ingredient_id: Ingredient.find_by_name('Ice').id,
+  cocktail_id: Cocktail.find_by_name('Negroni').id,
+  )
+
 Cocktail.create(
   name: 'Gin & Tonic',
   img_url: "https://instagram.fcgh23-1.fna.fbcdn.net/vp/117a62054b9feee698fc8d5eb61624db/5C7F705C/t51.2885-15/e35/41679793_545683285859070_8969216307731890176_n.jpg",
   post_url: "https://www.instagram.com/p/BoUuYy9l_x0/?taken-by=paladarsemfrescura"
+  )
+Dose.create(
+  description: '120ml',
+  ingredient_id: Ingredient.find_by_name('Tonic Water').id,
+  cocktail_id: Cocktail.find_by_name('Gin & Tonic').id,
   )
 Cocktail.create(
   name: 'Special G&T',

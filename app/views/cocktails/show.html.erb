@@ -1,14 +1,32 @@
-<p id="notice"><%= notice %></p>
+<!-- <p id="notice"><%= notice %></p> -->
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6">
+      <div class="drink-photo">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%=@cocktail.img_url%>);">
+          <%= link_to('' ,@cocktail.post_url, class: "card-link")%>
+        </div>
+      </div>
+    </div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @cocktail.name %>
-</p>
+  <div class="col-xs-12 col-sm-6">
+    <div class="drink-components">
+      <h2><%= @cocktail.name %></h2>
+      <p>cocktail ingredients and doses</p>
+      <ul>
+        <% @doses.each do |dose| %>
+          <li>
+            <%= dose.description %> of <%= Ingredient.find(dose.ingredient_id).name %>
+          </li>
+        <%end%>
+      </ul>
+    </div>
+  </div>
 
-<h5>cocktail ingredients and doses</h5>
-<ul>
-
-</ul>
+  </div>
+</div>
 
 
-<p><%= link_to 'Back', cocktails_path %></p>
+<p><%= link_to 'Add a Dose', new_cocktail_dose_path(@cocktail.id) %></p>
+<p><%= link_to 'Back', root_path %></p>
+
