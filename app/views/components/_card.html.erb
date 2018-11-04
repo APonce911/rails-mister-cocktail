@@ -2,6 +2,7 @@
   <div class="card-description">
     <h2><%=object.name%></h2>
   </div>
-  <%= image_tag 'logopsf-white2.jpg', class: "card-user"%>
-  <a class="card-link" target="_blank" href=<%=object.post_url%>></a>
+  <%= link_to(image_tag('logopsf-white2.jpg', class: "card-user"), object.post_url)%>
+  <%= link_to('' ,cocktail_path(object.id), class: "card-link")%>
 </div>
+

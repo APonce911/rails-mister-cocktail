@@ -10,11 +10,19 @@
   border-radius: 5px;
 }
 .card-user {
+  z-index: 10;
   position: absolute;
   right: 10px;
   top: 10px;
   width: 40px;
   border-radius: 50%;
+  opacity: 0.6;
+  &:hover{
+    opacity: 1;
+    width:43px;
+    right: 9px;
+    top: 9px;
+  }
 }
 .card-category {
   position: absolute;
@@ -47,6 +55,7 @@
   opacity: 0;
 }
 .card-link:hover {
+  // font-weight: bold;
   opacity: 0.1;
 }
 
