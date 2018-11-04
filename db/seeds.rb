@@ -6,7 +6,7 @@ Ingredient.create(name: "Cachaça")
 Ingredient.create(name: "Gin")
 Ingredient.create(name: "Campari")
 Ingredient.create(name: "Vermouth Rosso")
-Ingredient.create(name: "Ice")
+Ingredient.create(name: "ice")
 Ingredient.create(name: "Tonic Water")
 Ingredient.create(name: "Zimbro")
 Ingredient.create(name: "Lemon")
@@ -38,7 +38,7 @@ Dose.create(
   )
 Dose.create(
   description: '60ml',
-  ingredient_id: Ingredient.find_by_name('Ice').id,
+  ingredient_id: Ingredient.find_by_name('ice').id,
   cocktail_id: Cocktail.find_by_name('Negroni').id,
   )
 
